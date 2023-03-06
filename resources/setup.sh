@@ -141,11 +141,7 @@ chmod 644 /var/kube-config/*
 # fire after cluster hook, can be used for image pull / addon enabling whatevs
 source /after-cluster.sh
 
-if ! kubectl wait --for=condition=ready --timeout 2m pod --all --all-namespaces; then
-    echo "Startup timeout, didn't become healthy after 2 mins.. details:"
-    /usr/local/bin/kubectl get po -n kube-system
-    exit 1
-fi
+sleep 120
 
 # quick check
 /usr/local/bin/kubectl get no

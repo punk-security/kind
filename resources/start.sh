@@ -44,8 +44,7 @@ supervisorctl -c /etc/supervisord.conf start config-serve
 echo "Starting Kubernetes.."
 supervisorctl -c /etc/supervisord.conf start kubelet
 
-sleep 15
-kubectl wait --for=condition=ready --timeout 3m pod --all --all-namespaces
+sleep 60
 kubectl get po --all-namespaces
 
 # ready
