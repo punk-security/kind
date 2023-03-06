@@ -10,12 +10,12 @@ if [ -z "$DOCKER_IMAGE" ]; then
 fi
 
 if [ -z "$MINIKUBE_VERSION" ]; then
-	MINIKUBE_VERSION="v1.3.1"
+	MINIKUBE_VERSION="v1.29.0"
 	echo "Defaulting Minikube version to $MINIKUBE_VERSION"
 fi
 
 if [ -z "$KUBERNETES_VERSION" ]; then
-	KUBERNETES_VERSION="v1.14.8"
+	KUBERNETES_VERSION="v1.23.16"
 	echo "Defaulting Kubernetes version to $KUBERNETES_VERSION"
 fi
 
