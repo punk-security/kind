@@ -1,5 +1,5 @@
 #!/bin/bash
-docker pull nginx:1.13 # used by config-serve
+docker pull busybox
 
 # Add images here for them to be available at runtime
 # for example:
