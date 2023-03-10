@@ -37,9 +37,6 @@ else
     echo "no docker-registry/-credentials supplied"
 fi
 
-echo "Starting config server.."
-supervisorctl -c /etc/supervisord.conf start config-serve
-
 # start cluster
 echo "Starting Kubernetes.."
 supervisorctl -c /etc/supervisord.conf start kubelet
